@@ -5,12 +5,12 @@ if [[ "$#" -lt 2 || "$1" == "-h" ]]; then
   exit 0
 fi
 
-for path in ${@:2}
+for url in ${@:2}
 do
-	mkdir -p $path
-	touch $path/$1.ftl
+	mkdir -p $url
+	touch $url/$1.ftl
 
-	cat <<- EOF > $path/$1.ftl
+	cat <<- EOF > $url/$1.ftl
 {
 
   <@lib.endpointInfo
