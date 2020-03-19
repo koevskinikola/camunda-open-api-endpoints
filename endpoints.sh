@@ -26,7 +26,8 @@ do
         type = "string"
         required = true
         last = true
-        desc = "The id of the ADD_TYPE for which ENTER_DESC should be ADD_ACTION."/>
+        desc = ""/>
+
     <#assign last = true >
     <#include "/lib/commons/pagination-params.ftl" >
 
@@ -38,7 +39,7 @@ do
       examples = ['"example-1": {
                        "summary": "",
                        "description": "",
-                       "value":
+                       "value": ""
                      }'] />
 
   "responses" : {
@@ -47,7 +48,12 @@ do
         code = "200"
         dto = "ADD_DTO"
         array = true
-        desc = "Request successful." />
+        desc = "Request successful."
+        examples = ['"example-1": {
+                       "summary": "",
+                       "description": "",
+                       "value": ""
+                     }'] />
 
     <@lib.response
         code = "400"

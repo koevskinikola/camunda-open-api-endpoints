@@ -9,9 +9,11 @@ mkdir -p $2
 touch $2/$1.ftl
 
 cat <<- EOF > $2/$1.ftl
-{
-  "type": "object",
-  "properties": {
+<@lib.dto
+    title = ""
+    desc = ""
+    type = "object"
+    required = [] >
 
     <@lib.property
         name = "id"
@@ -48,12 +50,11 @@ cat <<- EOF > $2/$1.ftl
         desc = "" />
 
     <@lib.property
-        name = "links"
+        name = "PROPERTY_NAME"
         type = "array"
         dto = "_Dto"
         last = true
         desc = "" />
 
-  }
-}
+</@lib.dto>
 EOF
